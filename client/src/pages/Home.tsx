@@ -36,7 +36,7 @@ export default function Home() {
             </a>
             <Button
               className="bg-green-600 hover:bg-green-700 text-white"
-              onClick={() => window.location.href = 'https://unmythical-fendered-gerard.ngrok-free.dev/login'}
+              onClick={() => window.location.href = 'https://bolsinho-deploy.onrender.com/login'}
             >
               Começar Agora
             </Button>
@@ -71,7 +71,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   className="bg-green-600 hover:bg-green-700 text-white group"
-                  onClick={() => window.location.href = 'https://unmythical-fendered-gerard.ngrok-free.dev/login'}
+                  onClick={() => window.location.href = 'https://bolsinho-deploy.onrender.com/login'}
                 >
                   Explorar Agora
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition" />
@@ -704,7 +704,7 @@ export default function Home() {
             <Button
               size="lg"
               className="bg-white text-green-700 hover:bg-green-50 font-semibold"
-              onClick={() => window.location.href = 'https://unmythical-fendered-gerard.ngrok-free.dev/login'}
+              onClick={() => window.location.href = 'https://bolsinho-deploy.onrender.com/login'}
             >
               Começar Agora
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -734,7 +734,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm">
                 <li><a href="#features" className="hover:text-white transition">Funcionalidades</a></li>
                 <li><a href="https://github.com/FilipeSCampos/Bolsinho#-documentação" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Documentação</a></li>
-                <li><a href="https://unmythical-fendered-gerard.ngrok-free.dev/login" className="hover:text-white transition">Acessar App</a></li>
+                <li><a href="https://bolsinho-deploy.onrender.com/login" className="hover:text-white transition">Acessar App</a></li>
               </ul>
             </div>
             <div>
