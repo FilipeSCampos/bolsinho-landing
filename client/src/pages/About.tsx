@@ -3,16 +3,21 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Users, Target, Lightbulb, TrendingUp, DollarSign, Award } from "lucide-react";
 import { useLocation } from "wouter";
 
+import filipeImg from "../imgs/filipe.png";
+import hermesImg from "../imgs/hermes.png";
+import juliaImg from "../imgs/julia.png";
+import yasminImg from "../imgs/yasmin.png";
+
 export default function About() {
     const [, setLocation] = useLocation();
 
     const team = [
-        { name: "Filipe Sampaio", role: "Engenheiro Cientista e Desenvolvedor", ra: "22251207", color: "bg-blue-100 text-blue-700" },
-        { name: "Hermes", role: "StakeHolder e Estatístico", ra: "22352985", color: "bg-green-100 text-green-700" },
+        { name: "Filipe Sampaio", role: "Engenheiro, Cientista e Desenvolvedor", ra: "22251207", color: "bg-blue-100 text-blue-700", image: filipeImg },
+        { name: "Hermes Winarski", role: "StakeHolder e Estatístico", ra: "22352985", color: "bg-green-100 text-green-700", image: hermesImg },
         { name: "Vinicius Magrinelli", role: "ScrumMaster e Analista", ra: "22308779", color: "bg-purple-100 text-purple-700" },
-        { name: "Lukas", role: "Designer Ux/Ui", ra: "00000000", color: "bg-pink-100 text-pink-700" },
-        { name: "Yasmin", role: "Database Admin e Analista", ra: "00000000", color: "bg-orange-100 text-orange-700" },
-        { name: "Julia", role: "Project Owner e Analista", ra: "00000000", color: "bg-teal-100 text-teal-700" },
+        { name: "Regis Lukas", role: "Designer Ux/Ui", ra: "22252254 ", color: "bg-pink-100 text-pink-700" },
+        { name: "Yasmin Helena", role: "Database Admin e Analista", ra: "22250376", color: "bg-orange-100 text-orange-700", image: yasminImg },
+        { name: "Júlia Martins", role: "Project Owner e Analista", ra: "22250263", color: "bg-teal-100 text-teal-700", image: juliaImg },
     ];
 
     return (
@@ -62,8 +67,12 @@ export default function About() {
                         {team.map((member, index) => (
                             <Card key={index} className="hover:shadow-md transition-shadow border-gray-100">
                                 <CardContent className="p-6 flex items-start gap-4">
-                                    <div className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0 ${member.color}`}>
-                                        {member.name.charAt(0)}
+                                    <div className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0 ${member.color} overflow-hidden`}>
+                                        {member.image ? (
+                                            <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                                        ) : (
+                                            member.name.charAt(0)
+                                        )}
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900">{member.name}</h3>
@@ -195,7 +204,7 @@ export default function About() {
             {/* Footer Simple */}
             <footer className="bg-gray-50 py-8 border-t border-gray-100 mt-12">
                 <div className="container mx-auto px-4 text-center text-gray-500 text-sm">
-                    <p>© 2024 Bolsinho. Projeto Integrador III.</p>
+                    <p>© 2025 Bolsinho. Projeto Integrador III.</p>
                 </div>
             </footer>
         </div>
